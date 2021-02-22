@@ -8,7 +8,7 @@ Os materias estão disponiveis neste Github.
 
 [https://github.com/arnaldojr/IoT/](https://github.com/arnaldojr/IoT/)
 
-- [Aula 01 - Introdução ao Pandas](./aula01)
+- [Aula 01 - Introdução a Internet das Coisas](./aula01)
     - [Slides da aula](/aula01/Aula01.pdf)  
     - [Atividade de sala](./aula01/Aula01_Atividade.pdf)
 
