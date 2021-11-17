@@ -10,9 +10,14 @@ Os materias estão disponiveis neste Github.
 
 [website: https://arnaldojr.github.io/IoT/](https://arnaldojr.github.io/IoT/)
 
-- [Aula 01 - Introdução a Internet das Coisas](./aula01)
-    - [Slides da aula](/aula01/Aula01.pdf)  
-    - [Atividade de sala](./aula01/Aula01_Atividade.pdf)
+## Como clonar o repositório usuários Linux
 
-
-
+``` bash
+$ # Clone o repositório
+$ git clone https://github.com/arnaldojr/IoT/
+$ cd IoT
+$ # instale o Simulide
+$ ./guias/install_simulide.sh
+$ # instale as dependencias python
+$ pip install -r requirements.txt --user
+```
