@@ -1,0 +1,10 @@
+site_name: IoT
+
+nav:
+  - Home: index.md
+  - instalação: guias/instalacao.md
+  - Aulas: 
+    - Aula01: aulas/aula01/Aula1-Intro IA-IoT-2021.pdf
+
+
+theme: material
