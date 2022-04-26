@@ -2,11 +2,14 @@ site_name: IoT
 
 nav:
   - Home: index.md
-  - instalação: guias/instalacao.md
-  - Aulas: 
-    - Aula01: aulas/aula01/Aula1-Intro IA-IoT-2021.pdf
-    - Aula02: aulas/aula02/Aula2-IoT-22.pdf
-    - Aula03: aulas/aula03/Aula3-IoT-22.pdf
-  - Exemplo: 
-    - Jogo da memória: aulas/aula03/jogomemoria/jogomemoria.ino
+  - Instalação: guias/instalacao.md
+  - Laboratórios: 
+    - Lab01: aulas/lab1/Aula1-IoT-22.pdf
+    - Lab02: aulas/lab2/Aula2-IoT-22.pdf
+    - Lab03: aulas/lab3/Aula3-IoT-22.pdf
+  - Exemplos: 
+    - Jogo da memória: aulas/lab3/jogomemoria/jogomemoria.ino
+  - Dicas: 
+    - Cheat Sheet: aulas/Dicas/Arduino-Cheat-Sheet.pdf
+    
 theme: material
