@@ -1,0 +1,15 @@
+<circuit reactStep="50" Speed_per="100" Simu_Step_nS="1000" type="simulide_0.4" noLinAcc="5" animate="0" Speed_sps="1000000">
+
+Unique  Id: Arduino Uno-1: 
+Circuit Id: Arduino Uno-1
+<item hflip="1" labelrot="0" varList="" vflip="1" Auto_Load="false" Show_id="true" itemtype="Arduino" mainComp="false" circRot="1.3054985e-316" valLabelx="0" boardPos="-1e+06,-1e+06" eeprom="" valLabRot="0" x="-400" Logic_Symbol="false" Init_gdb="false" labely="-21" labelx="100" Program="" id="Arduino Uno-1" valLabely="0" circPos="0,0" Mhz="16" boardRot="-1e+06" y="-356" rotation="0" objectName="Arduino Uno-1"/>
+
+Unique  Id: SerialPort-2: 
+Circuit Id: SerialPort-2
+<item hflip="1" Mcu_Id="Arduino Uno-1" labelrot="0" Auto_Open="false" vflip="1" Show_id="false" StopBits="1" itemtype="SerialPort" mainComp="false" circRot="-1.931402135782828e-181" valLabelx="0" Mcu_Uart="1" boardPos="-1e+06,-1e+06" DataBits="8" valLabRot="0" x="-392" Parity="0" labely="-20" labelx="-34" BaudRate="115200" id="SerialPort-2" valLabely="0" circPos="0,0" boardRot="-1e+06" y="-372" Port_Name="/dev/tnt0" rotation="0" FlowControl="0" objectName="SerialPort-2"/>
+
+Unique  Id: SerialTerm-3: 
+Circuit Id: SerialTerm-3
+<item hflip="1" Mcu_Id="Arduino Uno-1" labelrot="0" sizey="255" posx="2034" sizex="562" vflip="1" Show_id="false" itemtype="SerialTerm" mainComp="false" circRot="0" valLabelx="0" Mcu_Uart="1" boardPos="-1e+06,-1e+06" valLabRot="0" x="-400" labely="-24" labelx="-16" id="SerialTerm-3" valLabely="0" circPos="0,0" posy="631" boardRot="-1e+06" y="-356" rotation="0" objectName="SerialTerm-3"/>
+ 
+</circuit>

@@ -7,8 +7,29 @@ nav:
     - Lab01: aulas/lab1/Aula1-IoT-22.pdf
     - Lab02: aulas/lab2/Aula2-IoT-22.pdf
     - Lab03: aulas/lab3/Aula3-IoT-22.pdf
-  - Exemplos: 
+  - Exemplos:
+    - Básicos - HelloWorld:
+      - Pisca LED: exemplos/0.helloworld/ex1/hello.ino 
+      - LED e BOTÃO: exemplos/0.helloworld/ex2/hello2.ino
+      - Entrada Analógica: exemplos/0.helloworld/ex3/hello3.ino
+      - Função Millis: exemplos/0.helloworld/ex4-millis/millis.ino
+      - Serial LED: exemplos/3.serial_led/serial_led.ino
+      - INTERRUPÇÃO DE PINO: exemplos/0.helloworld/ex5-interrup/interrup.ino
+    - Frequêncimetro: exemplos/1.frequencimetro/1.frequencimetro.rar 
+    - Display OLED: exemplos/2.ad_disp_pwm/2.ad_disp_pwm.rar 
+    - Servo Motor: exemplos/4.servo_motor/serial_servo.ino
+    - Sensor Ultrassônico:
+      - Código Arduino:  exemplos/6.sensor_ultrassonico/serial_ultrassonico.ino
+      - SimulIDE:  exemplos/6.sensor_ultrassonico/serial_ultrassonico.simu
+      - Biblioteca: exemplos/6.sensor_ultrassonico/Ultrasonic-master.zip      
     - Jogo da memória: aulas/lab3/jogomemoria/jogomemoria.ino
+    - Pyton-Arduino:
+      - Código Python: exemplos/5.py-ard/py-ard.py
+      - Código Arduino: exemplos/5.py-ard\py-ard.ino
+      - SimulIDE: exemplos/5.py-ard/py-ard.simu
+    - Serial-JSON:
+      - TX: exemplos/7.serial_json/serial_json/serial_json_envia/serial_analog.ino
+      - RX: exemplos/7.serial_json/serial_json/serial_json_recebe/serial_json_recebe.ino
   - Dicas: 
     - Cheat Sheet: aulas/Dicas/Arduino-Cheat-Sheet.pdf
     
