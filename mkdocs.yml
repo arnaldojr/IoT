@@ -13,10 +13,6 @@ theme:
   name: material
   custom_dir: overrides
 
-docs_dir: docs
-site_dir: docs
-
-
 
 nav:
   - Home: index.md
