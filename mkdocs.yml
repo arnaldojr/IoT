@@ -1,12 +1,30 @@
 site_name: IoT
 
+extra:
+    materia: Disruptive Architectures IA and IoT
+    professor: Arnaldo Viana
+    ano: 2022
+
+
+
+theme:
+  feature:
+    tabs: true
+  name: material
+  custom_dir: overrides
+
+docs_dir: docs
+site_dir: docs
+
+
+
 nav:
   - Home: index.md
   - Instalação: guias/instalacao.md
   - Laboratórios: 
     - Lab01: aulas/lab1/Aula1-IoT-22.pdf
     - Lab02: aulas/lab2/Aula2-IoT-22.pdf
-    - Lab03: aulas/lab3/Aula3-IoT-22.pdf
+    - Lab03: aulas/lab3/index.md
   - Exemplos:
     - Básicos - HelloWorld:
       - Pisca LED: exemplos/0.helloworld/ex1/hello.ino 
@@ -32,5 +50,58 @@ nav:
       - RX: exemplos/7.serial_json/serial_json/serial_json_recebe/serial_json_recebe.ino
   - Dicas: 
     - Cheat Sheet: aulas/Dicas/Arduino-Cheat-Sheet.pdf
+    - Dicas de projetos: aulas/Dicas/dicas-projetos.md
     
 theme: material
+
+
+# Extensions / plugins
+plugins:
+  - git-revision-date-localized
+  - search
+
+extra_css:
+  - https://cdn.jsdelivr.net/gh/insper-education/active-handout-css@main/devlife.css
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/gh/insper-education/active-handout-plugins-js@main/package/plugin-bundle.js
+  - js/termynal.js
+  - js/custom.js
+
+markdown_extensions:
+  - markdown.extensions.tables
+  - tables
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      base_path: code
+      check_paths: true

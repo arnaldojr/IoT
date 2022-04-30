@@ -14,8 +14,10 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material # 
-
+      # pip install mkdocs-material #
+      - run: | 
+          pip install -r requirements.txt
+          pip install mkdocs-minify-plugin>=0.2
        # deploy
       - run: |
           mkdocs gh-deploy --force

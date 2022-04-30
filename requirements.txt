@@ -1,0 +1,7 @@
+# Direct dependencies
+mkdocs
+Pygments
+markdown
+pymdown-extensions
+mkdocs-material
+mkdocs-git-revision-date-localized-plugin
