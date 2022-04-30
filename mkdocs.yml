@@ -1,55 +1,41 @@
 site_name: IoT
+site_author: Arnaldo Viana 
+
 
 extra:
     materia: Disruptive Architectures IA and IoT
     professor: Arnaldo Viana
     ano: 2022
 
-
-
 theme:
   feature:
     tabs: true
-  name: material
-  custom_dir: overrides
+  name: active-handout
+  #custom_dir: overrides
+
+docs_dir: material
+site_dir: docs
+
+repo_url: https://github.com/arnaldojr/IoT/
+repo_name: "IoT"
+site_url: https://arnaldojr.github.io/IoT/
 
 
-nav:
-  - Home: index.md
-  - Instalação: guias/instalacao.md
-  - Laboratórios: 
-    - Lab01: aulas/lab1/Aula1-IoT-22.pdf
-    - Lab02: aulas/lab2/Aula2-IoT-22.pdf
-    - Lab03: aulas/lab3/index.md
-  - Exemplos:
-    - Básicos - HelloWorld:
-      - Pisca LED: exemplos/0.helloworld/ex1/hello.ino 
-      - LED e BOTÃO: exemplos/0.helloworld/ex2/hello2.ino
-      - Entrada Analógica: exemplos/0.helloworld/ex3/hello3.ino
-      - Função Millis: exemplos/0.helloworld/ex4-millis/millis.ino
-      - Serial LED: exemplos/3.serial_led/serial_led.ino
-      - INTERRUPÇÃO DE PINO: exemplos/0.helloworld/ex5-interrup/interrup.ino
-    - Frequêncimetro: exemplos/1.frequencimetro/1.frequencimetro.rar 
-    - Display OLED: exemplos/2.ad_disp_pwm/2.ad_disp_pwm.rar 
-    - Servo Motor: exemplos/4.servo_motor/serial_servo.ino
-    - Sensor Ultrassônico:
-      - Código Arduino:  exemplos/6.sensor_ultrassonico/serial_ultrassonico.ino
-      - SimulIDE:  exemplos/6.sensor_ultrassonico/serial_ultrassonico.simu
-      - Biblioteca: exemplos/6.sensor_ultrassonico/Ultrasonic-master.zip      
-    - Jogo da memória: aulas/lab3/jogomemoria/jogomemoria.ino
-    - Pyton-Arduino:
-      - Código Python: exemplos/5.py-ard/py-ard.py
-      - Código Arduino: exemplos/5.py-ard\py-ard.ino
-      - SimulIDE: exemplos/5.py-ard/py-ard.simu
-    - Serial-JSON:
-      - TX: exemplos/7.serial_json/serial_json/serial_json_envia/serial_analog.ino
-      - RX: exemplos/7.serial_json/serial_json/serial_json_recebe/serial_json_recebe.ino
-  - Dicas: 
-    - Cheat Sheet: aulas/Dicas/Arduino-Cheat-Sheet.pdf
-    - Dicas de projetos: aulas/Dicas/dicas-projetos.md
     
-theme: material
+# theme: material
 
+
+# Extensions / plugins
+
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/gh/insper-education/active-handout-plugins-js@main/package/plugin-bundle.js
+    #  - http://localhost:9000/plugin-bundle.js
+  - js/termynal.js
+  - js/custom.js
 
 # Extensions / plugins
 plugins:
@@ -57,15 +43,9 @@ plugins:
   - search
 
 extra_css:
+#  - css/termynal.css
   - https://cdn.jsdelivr.net/gh/insper-education/active-handout-css@main/devlife.css
 
-extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://cdn.jsdelivr.net/gh/insper-education/active-handout-plugins-js@main/package/plugin-bundle.js
-  - js/termynal.js
-  - js/custom.js
 
 markdown_extensions:
   - markdown.extensions.tables
@@ -101,3 +81,38 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path: code
       check_paths: true
+
+
+nav:
+  - Home: index.md
+  - Instalação: guias/instalacao.md
+  - Laboratórios: 
+    - Lab01: aulas/lab1/Aula1-IoT-22.pdf
+    - Lab02: aulas/lab2/Aula2-IoT-22.pdf
+    - Lab03: aulas/lab3/index.md
+  - Exemplos:
+    - Básicos - HelloWorld:
+      - Pisca LED: exemplos/0.helloworld/ex1/hello.ino 
+      - LED e BOTÃO: exemplos/0.helloworld/ex2/hello2.ino
+      - Entrada Analógica: exemplos/0.helloworld/ex3/hello3.ino
+      - Função Millis: exemplos/0.helloworld/ex4-millis/millis.ino
+      - Serial LED: exemplos/3.serial_led/serial_led.ino
+      - INTERRUPÇÃO DE PINO: exemplos/0.helloworld/ex5-interrup/interrup.ino
+    - Frequêncimetro: exemplos/1.frequencimetro/1.frequencimetro.rar 
+    - Display OLED: exemplos/2.ad_disp_pwm/2.ad_disp_pwm.rar 
+    - Servo Motor: exemplos/4.servo_motor/serial_servo.ino
+    - Sensor Ultrassônico:
+      - Código Arduino:  exemplos/6.sensor_ultrassonico/serial_ultrassonico.ino
+      - SimulIDE:  exemplos/6.sensor_ultrassonico/serial_ultrassonico.simu
+      - Biblioteca: exemplos/6.sensor_ultrassonico/Ultrasonic-master.zip      
+    - Jogo da memória: aulas/lab3/jogomemoria/jogomemoria.ino
+    - Pyton-Arduino:
+      - Código Python: exemplos/5.py-ard/py-ard.py
+      - Código Arduino: exemplos/5.py-ard\py-ard.ino
+      - SimulIDE: exemplos/5.py-ard/py-ard.simu
+    - Serial-JSON:
+      - TX: exemplos/7.serial_json/serial_json/serial_json_envia/serial_analog.ino
+      - RX: exemplos/7.serial_json/serial_json/serial_json_recebe/serial_json_recebe.ino
+  - Dicas: 
+    - Cheat Sheet: aulas/Dicas/Arduino-Cheat-Sheet.pdf
+    - Dicas de projetos: aulas/Dicas/dicas-projetos.md
