@@ -41,6 +41,8 @@ extra_javascript:
 plugins:
   - git-revision-date-localized
   - search
+  - mkdocs-jupyter:
+      execute: False
 
 extra_css:
 #  - css/termynal.css
@@ -90,6 +92,7 @@ nav:
     - Lab01: aulas/lab1/Aula1-IoT-22.pdf
     - Lab02: aulas/lab2/Aula2-IoT-22.pdf
     - Lab03: aulas/lab3/index.md
+    - Lab04: aulas/lab4/TTS-STT.ipynb
   - CheckPoint:
     - CheckPoint3: checkpoint3/index.md
   - Exemplos:
