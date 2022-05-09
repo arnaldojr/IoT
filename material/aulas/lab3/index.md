@@ -1,4 +1,5 @@
 Neste Laboratório vamos trabalhar com comunicação serial para criar um jogo da memória. 
+> - arquivo pdf do laboratório: [laboratório3](slides.pdf)
 
 ### Comunicação serial
 

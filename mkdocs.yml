@@ -90,6 +90,8 @@ nav:
     - Lab01: aulas/lab1/Aula1-IoT-22.pdf
     - Lab02: aulas/lab2/Aula2-IoT-22.pdf
     - Lab03: aulas/lab3/index.md
+  - CheckPoint:
+    - CheckPoint3: checkpoint3/index.md
   - Exemplos:
     - Básicos - HelloWorld:
       - Pisca LED: exemplos/0.helloworld/ex1/hello.ino 
