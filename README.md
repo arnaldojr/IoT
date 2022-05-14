@@ -1,4 +1,4 @@
-# TDS - Disruptive Architectures: IoT & IA
+# Bem vindo disciplina de IoT
 
 Olá pessoal, bem vindos!! Neste repositório você irá encontrar alguns conteúdos ministrados em sala de aula assim como os exemplos e laborórios. 
 
