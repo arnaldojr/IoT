@@ -97,7 +97,7 @@ nav:
     - CheckPoint3: checkpoint3/index.md
   - Exemplos:
     - Básicos - HelloWorld:
-      - Pisca LED: exemplos/0.helloworld/ex1/hello.ino 
+      - Pisca LED: exemplos/0.helloworld/ex1/index.md
       - LED e BOTÃO: exemplos/0.helloworld/ex2/hello2.ino
       - Entrada Analógica: exemplos/0.helloworld/ex3/hello3.ino
       - Função Millis: exemplos/0.helloworld/ex4-millis/millis.ino
