@@ -88,11 +88,13 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Instalação: guias/instalacao.md
+  - Agenda: programacao/agenda.md
   - Laboratórios: 
     - Lab01: aulas/lab1/Aula1-IoT-22.pdf
     - Lab02: aulas/lab2/Aula2-IoT-22.pdf
     - Lab03: aulas/lab3/index.md
     - Lab04: aulas/lab4/TTS-STT.ipynb
+    - Lab05: aulas/lab5/index.md    
   - CheckPoint:
     - CheckPoint3: checkpoint3/index.md
   - Exemplos:
