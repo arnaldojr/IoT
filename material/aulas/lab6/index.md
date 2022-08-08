@@ -36,7 +36,7 @@ Normalmente os criadores das bibliotecas descrevem o passo-a-passo para utilizar
 > DICA: Explore a documentação e os exemplos da biblioteca instalada.   
 
 
-## ArduinoJson
+## Biblioteca ArduinoJson
 
 A biblioteca ArduinoJSON é escrita em C++ para realizar a comunicação de dados no formato JSON (JavaScript Object Notation) com aplicações para IoT. 
 Pra quem conhece Python a estrutura é muito parecida com a de dicionários:
@@ -45,10 +45,10 @@ Pra quem conhece Python a estrutura é muito parecida com a de dicionários:
 
 Documentação oficial em: [arduinoJSON](https://arduinojson.org/)
 
-??? note "Desafio"
+!!! exercise
     Faça a instalação da biblioteca arduinoJSON direto pelo ArduinoIDE, no campo de busca digite ``ArduinoJson`` e instale a biblioteca. Para mais detalhes de como realizar a instalação acesse [aqui a documentação oficial de instalação](https://arduinojson.org/v6/doc/installation/)
  
-## DTH11
+## Sensor DTH11
 
 O DTH11 é um sensor digital de temperatura e umidade muito utilizado em diversas aplicações. Para facilitar o trabalho utilizamos uma biblioteca para realizar as leituras de temperatura e umidade. 
 
@@ -65,7 +65,7 @@ O DTH11 é um sensor digital de temperatura e umidade muito utilizado em diversa
 > Cuidado para não inverter os pinos de alimentação. 
 
 
-??? note "Desafio"
+!!! exercise
     Faça a instalação da biblioteca DTH11 fazendo o Download zip do repositório através [link](https://https://github.com/adafruit/DHT-sensor-library). Após o download descompacte o arquivo .zip, renomeie para ``DTH`` e mova-o para a pasta ~/Arduino/Libraries/
 
 ## Testando o sensor DTH11 
@@ -78,7 +78,7 @@ Monte o circuito da imagem abaixo e não esqueça de conectar o resistor
  
 ![](dth11-circ.png)
 
- ??? note "Desafio"
+ !!! exercise
     De acordo com o circuito qual o pino do arduino é utilizado para realizar comunicação digital com o sensor DTH11?
 
 ### O código de teste 
@@ -139,7 +139,7 @@ Vamos altera nosso código para enviar as informações do sensor DTH11 em forma
 
 Uma etapa importante é definir a variavel TAMANHO que serve como buffer em bytes para alocar o JSON que vamos trabalhar. Para isso podemos utilizar o ``ArduinoJson Assistant`` [neste link](https://arduinojson.org/v6/assistant/#/step1), siga o passo-a-passo da ferramenta para descobrir o valor minimo que devemos utilizar. 
 
-??? note "Desafio"
+!!! exercise
     Utilizando o ``ArduinoJson Assistant`` qual o valor recomendado para o json do exemplo abaixo?
 
     ```python
@@ -232,7 +232,7 @@ Faça o deplay e se tudo estiver correto, no debug vai aparecer as mensagens rec
 Para o desenvolvimento do sistema de supervisório ficar completo basta adaptar o fluxo que temos no node-RED para receber os tópicos de temperatura e umidade separados e enviar para o dashboard.
 
 
-??? note "Desafio"
+!!! exercise
     Faça as adaptações necessárias para exibir os valores de temperatura e umidade em 2 gauge e 2 chart como na imagem abaixo:
     ![](flow6.png)
 
