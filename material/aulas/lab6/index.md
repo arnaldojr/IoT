@@ -66,7 +66,7 @@ O DTH11 é um sensor digital de temperatura e umidade muito utilizado em diversa
 
 
 !!! exercise
-    Faça a instalação da biblioteca DTH11 fazendo o Download zip do repositório através [link](https://https://github.com/adafruit/DHT-sensor-library). Após o download descompacte o arquivo .zip, renomeie para ``DTH`` e mova-o para a pasta ~/Arduino/Libraries/
+    Faça a instalação das bibliotecas para usar o DTH11: Adafruit Unified Sensor Libs: [Adafruit Sensor](https://github.com/adafruit/Adafruit_Sensor) [DTH Sensor](https://github.com/adafruit/DHT-sensor-library). Após o download descompacte o arquivo .zip, renomeie para ``DTH`` e mova-o para a pasta ~/Arduino/Libraries/
 
 ## Testando o sensor DTH11 
 
@@ -122,6 +122,7 @@ void loop()
     Serial.print(t);
     Serial.println(" *C");
   }
+  delay(500); //delay de 0,5s
 }
 ```
 ### O teste 
@@ -159,7 +160,7 @@ informações via serial no formato JSON para o servidor node-Red que recebe e t
 
 /////Json
 #include <ArduinoJson.h>
-const int TAMANHO = 200;  //define o tamanho do buffer para o json
+const int TAMANHO = 50;  //define o tamanho do buffer para o json
 
 ///// Sensor DTH
 #include "DHT.h"
@@ -189,11 +190,11 @@ void loop()
   // Faz a leitura da temperatura  
   float temp = dht.readTemperature();
   // faz a leitura da humidade
-  float hum = dht.readHumidity();
+  float umi = dht.readHumidity();
 
   //formato de escrita do json
   json["temperatura"] = temp;
-  json["humidade"] = hum;
+  json["humidade"] = umi;
 
   serializeJson(json, Serial);
   Serial.println();
