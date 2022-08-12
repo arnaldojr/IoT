@@ -66,11 +66,17 @@ O DTH11 é um sensor digital de temperatura e umidade muito utilizado em diversa
 
 
 !!! exercise
-    Faça a instalação das bibliotecas para usar o DTH11: Adafruit Unified Sensor Libs: [Adafruit Sensor](https://github.com/adafruit/Adafruit_Sensor) [DTH Sensor](https://github.com/adafruit/DHT-sensor-library). Após o download descompacte o arquivo .zip, renomeie para ``DTH`` e mova-o para a pasta ~/Arduino/Libraries/
+    Faça a instalação das bibliotecas para usar o DTH11: Adafruit Unified Sensor Libs: 
+  
+    1. [Adafruit Sensor](https://github.com/adafruit/Adafruit_Sensor)
+  
+    2. [DTH Sensor](https://github.com/adafruit/DHT-sensor-library). 
+
+    Após o download descompacte o arquivo .zip e mova-o para a pasta ``~/Arduino/Libraries/``
 
 ## Testando o sensor DTH11 
 
-Para testar o funcionamento do sensor vamos executar 2 etapas: Hardware e Software.
+Para testar o funcionamento do sensor vamos executar 2 etapas: Montagem do hardware e Desenvolvimento do Software.
 
 ### O hardware de teste
 
@@ -78,7 +84,7 @@ Monte o circuito da imagem abaixo e não esqueça de conectar o resistor
  
 ![](dth11-circ.png)
 
- !!! exercise
+!!! exercise
     De acordo com o circuito qual o pino do arduino é utilizado para realizar comunicação digital com o sensor DTH11?
 
 ### O código de teste 
@@ -194,7 +200,7 @@ void loop()
 
   //formato de escrita do json
   json["temperatura"] = temp;
-  json["humidade"] = umi;
+  json["umidade"] = umi;
 
   serializeJson(json, Serial);
   Serial.println();
