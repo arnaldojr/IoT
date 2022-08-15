@@ -1,7 +1,7 @@
 
 ![](https://hackaday.com/wp-content/uploads/2016/02/pihero.jpg?w=800)
 
-Até este momento do nosso curso, desenvolvemos pequenos projetos envolvendo sensores/atuadores e o nosso hardware foi o Arduino UNO além disso realizamos diversas integrações com Python e Node-Red.
+Até este momento do nosso curso, desenvolvemos pequenos projetos envolvendo sensores/atuadores e o nosso hardware(placa de desenvolvimento) foi o Arduino UNO, além disso aprendemos como integrar com Python e Node-Red.
  
 Neste laboratório vamos começar nossa jornada de computação embarcada com aplicações voltadas paara a Internet das Coisas com o hardware ``Raspberry PI``. 
 Nesta etapa vamos ver dentre outras coisas: o que é a Respberry Pi, Sistema Operacional Linux, como dar boot na placa Raspberry PI, como configurar e utilizar os GPIO - Pinos de Entrada/Saida, como realizar integração com Arduino, Node-Red e muito mais...
@@ -23,16 +23,15 @@ Nesta etapa vamos ver dentre outras coisas: o que é a Respberry Pi, Sistema Ope
 
 ## Raspberry PI
 
-Antes de falar da Raspberry PI, vamos lembrar que o Arduino UNO, que usamos, possui um ``microcontrolador`` de 8-bit [link do datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf). Sua arquitetura RISC é simples e cobre bem os requisitos mínimos de um sistema embarcado. Contudo, não é possivel rodar um sistema operacional completo, o que pode limitar algumas possibiildades de sistemas mais complexos.
+Antes de falar da Raspberry PI, vamos lembrar que o Arduino UNO, que usamos, possui um ``microcontrolador`` de 8-bit [link do datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf). Sua arquitetura RISC é simples, e cobre bem os requisitos mínimos de um sistema embarcado. Contudo, não é possivel rodar um sistema operacional completo, o que pode limitar algumas possibiildades de sistemas mais complexos.
 
-Para rodar um Sistema Operacional completo precissamos de um ``processador`` como o processador Intel I3, I5, I7, Celeron e muitos outros [(link do datasheet de um Intel I7)](https://www.intel.com/content/dam/www/public/us/en/documents/datasheets/core-i7-900-ee-and-desktop-processor-series-datasheet-vol-1.pdf) que usamos em nossos notebooks e desktops por exemplo. Como substituto de um notebook ou desktop podemos utilizar em algumas aplicações de computação embarcada um ``SBC``. 
+Para rodar um Sistema Operacional completo precissamos de um ``processador`` por exemplo o processador Intel 386, I5, I7, Celeron e muitos outros [(link do datasheet de um Intel I7)](https://www.intel.com/content/dam/www/public/us/en/documents/datasheets/core-i7-900-ee-and-desktop-processor-series-datasheet-vol-1.pdf) que usamos em nossos notebooks e desktops por exemplo. Em apicações de computação embarcada geralmente usamos um substituto para o notebook ou desktop, para atender requisitos tecnicos de custo, consumo de energia, peso, tamanho dentre outros... nesses casos podemos utilizar ``SBC`` (Single Board Computer).
 
-Os computadores de placa única (SBC) são computadores (combinação de um processador, memória, suporte de rede, entrada e saída e outros...) em uma placa só, com a vantagem de ser de baixo custo e possuir pequenas dimensões compar
-ado com um computador tradicional.
+Os computadores de placa única (SBC) são computadores completos (combinação de um processador, memória, suporte de rede, video, audio, entrada e saída e outros...) em uma placa só, com a vantagem de ser de baixo custo e possuir pequenas dimensões comparado ao computador convensional.
 
-É neste ponto que vamos começar a falar da ``Raspberry PI`` que é a mais famosa e mais conhecida SBC que roda Sistema Operacional Embarcado (Linux) ou seja, com ela é possivel desenvolver e implementar uma infinidade de projetos. 
+É neste ponto que vamos começar a falar da ``Raspberry PI`` que é a mais famosa e mais conhecida SBC e que suporta um Sistema Operacional Embarcado (Linux) ou seja, com ela é possivel desenvolver e implementar uma infinidade de projetos. 
 
-A Raspberry Pi foi lançada em 2012, sendo uma classe de pequenos computadores portáteis de baixíssimo custo, baseado nos processadores multimídia de arquitetura ARM da Broadcom, o mesmo que utilizados para celulares. O projeto foi um sucesso, vem crescendo e se atualizando, hoje temos diversos modelos para diversas aplicações diferentes como a Raspberry PI 3, 4, Zero e outros.
+A placa Raspberry Pi foi lançada em 2012 pela Raspberry Pi Fundation, sendo uma classe de pequenos computadores portáteis de baixíssimo custo, baseado nos processadores multimídia de arquitetura ARM da Broadcom, o mesmo que utilizados para celulares. O projeto foi um sucesso, vem crescendo e se atualizando, hoje temos diversos modelos para diversas aplicações diferentes como a Raspberry PI 3, 4, Zero e outros.
 
 > [link da documentação oficial](https://www.raspberrypi.org/)
 
@@ -204,6 +203,10 @@ Agora com tudo configurado e instalado chegou a hora de ligar e testar.
         - abra o puTTY e digite o ip da Raspberry PI
         - Se tudo estiver correto, um terminal irá abrir e vai solicitar login e senha
 
+
+![ssh](ssh2.png)
+
+
 > Por padrão, o login e senha da raspberry pi será:
 >
 > login: pi
@@ -211,3 +214,36 @@ Agora com tudo configurado e instalado chegou a hora de ligar e testar.
 > senha: raspberry
         
 Finalizado! Agora estamos com nosso raspberry conectado e funcionando. 
+
+
+## Primeiro teste da raspberry 
+
+Vamos fazer o nosso helloWord com a Raspberry Pi, apenas para testar, Monte o circuito da imagem abaixo:
+
+![blink led](blinkled.png)
+
+
+Agora no terminal da Raspberry Pi execute os comando de forma sequencial:
+
+```shell
+
+# Seta o pino GPIO 17 e configura como saida (output)
+echo "17" > /sys/class/gpio/export
+echo "out" > /sys/class/gpio/gpio17/direction
+
+# Escreve na saida do led (nivel logico alto)
+echo "1" > /sys/class/gpio/gpio4/value
+
+
+# Escreve na saida do led (nivel logico baixo)
+echo "0" > /sys/class/gpio/gpio4/value
+
+# libera o pino
+echo "17" > /sys/class/gpio/unexport
+
+```
+
+Se tudo deu certo até este ponto, conseguimos ver o led Apagar e acender. 
+
+!!! exercise
+    Agora é com você, o Raspberry PI permite o acesso aos seus pinos com o uso de diversas linguagens de programação diferentes, escolha uma de sua preferência e monte um código que faça o led Piscar no intervalo de 1 seg. Dica: Pesquise na internet por exemplos, [exemplos](https://medium.com/geekculture/how-to-blink-led-using-raspberry-pi-8351b06348d7)  
