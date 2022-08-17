@@ -66,7 +66,9 @@ Podemos utilizar diversas distribuções na RBI, dentre elas as mais comuns são
 - Home Assistent - Automação Residêncial
 - E muitos outross...
 
-    
+> Fim da teoria, vamos pra parte prática!! Leia com atenção este guia e siga todos os passos.  
+
+   
 ### Flash SD Card
 
 O SO (Sistema Operacional) da RPI fica armazenado no ``micro SD Card`` que deve ser de pelo menos 8GB Classe 10 ou superior, existem diversas formas de realizar a gravação do SO, para isso se prepare pois chegou a hora de por a mão na massa. 
@@ -85,19 +87,19 @@ Para gravar o SD Card podemos utilizar algumas opções o mais simples é o ``Ba
 !!! exercise
     Agora você deve:
 
-        - Remova o SD Card da RPI e conecte no adaptador USB
-        - Download do RPI OS 
-        - Download do Balena Etcher
-        - Abrir o Balena Etcher e siguir os passos para gravar o SD Card
-        - Após a gravação remova SD Card e conecte no computador novamente
+        - Remova o SD Card da RPI, conecte o cartão ao adaptador USB e plugue no seu notebook
+        - Faça o Download do RPI OS 
+        - Faça o Download do Balena Etcher
+        - No seu notebook, Abrir o Balena Etcher e siguir os passos para gravar o SD Card
+        - Após a gravação remova o adaptador da USB e conecte no computador novamente.
         - Se tudo deu certo:
-            -  vão aparecer duas particições referentes, sendo uma delas chamada "boot"
-            -  Caso contrario, alguma coisa deu errada, formate o SD Card em FAT32 e grave novamente. 
+            -  Irão aparecer duas particições referentes, sendo uma delas chamada "boot"
+            -  Caso contrário, alguma coisa deu errada, formate o SD Card em FAT32 e grave novamente. 
         
 
 ### Modo de uso - Interface Gráfica 
 
-> **não é desta forma que vamos usar a Raspberry PI em nosso curso** 
+> Apenas para conhecimento extra, pois **não é desta forma que vamos usar a Raspberry PI em nosso curso** 
 
 Para utilizar a Raspberry como um computador normal é muito simples basta conectar na Raspberry PI: O SD Card gravado, um monitor HDMI, um teclado e um mouse. Com tudo conectado corretamente conecte a fonte de alimentação 5V, o sistema operacional irá inicializar e você pode usar :) .  
 
@@ -106,6 +108,8 @@ Para utilizar a Raspberry como um computador normal é muito simples basta conec
 ![rpidesk](rpidesk.jpg)
 
 ### Modo de uso - Headless
+
+> Agora sim! Atenção nos próximos passos...
 
 Vamos utilizar o Rasbperry PI no modo ``Headless``, ou seja, sem conectar monitor, teclado e mouse. Para utilizar este modo é necessário realizar algumas configurações no micro SD Card antes de dar boot na Raspberry PI.
 
@@ -116,14 +120,14 @@ Para habilitar o SSH é necessário criar um arquivo vazio (sem extensão) chama
 !!! exercise
     Agora você deve:
 
-        - Conecte o micro SD Card no adaptador USB
-        - Acesse a partição boot 
-        - crie um arquivo chamado ssh
+        - Conecte o micro SD Card no adaptador USB, e plugue no notebook
+        - Acesse a partição chamada boot 
+        - crie um arquivo chamado ssh na raiz da partição boot
         - este arquivo não possui extensão 
 
 ![ssh](ssh.png)
 
-O resultado esperado é o da imagem abaixo:
+O resultado esperado deve ser semelhante ao da imagem abaixo:
 
 ![ssh1](ssh1.png)
 
@@ -135,51 +139,56 @@ A configuração de rede do Wi-fi é feita através da configuração de um arqu
 !!! exercise
     Agora você deve:
 
-        - Conecte o micro SD Card no adaptador USB
-        - Acesse a partição boot 
-        - crie um arquivo chamado wpa_supplicant.conf
-        - abra o arquivo com editor de texto (bloco de notas ou vscode)
+        - crie um arquivo chamado wpa_supplicant.conf na raiz da partição boot
+        - abra o arquivo criado com algum editor de texto (bloco de notas ou vscode)
         - configure o arquivo da mesma forma que o texto abaixo 
 
-> Neste ponto é importe ter uma rede wifi para se conecetar, para uma rede personal use a configuração abaixo: 
+> Neste ponto é importe ter uma rede wifi para se conecetar.
+> Temos 2 opções de redes: Personal e Enterprise
+> (Recomendado) - Para uma rede personal use a configuração abaixo.  
 > Esta configuração é a mais indicada e segura para ser usada em aula, para isso rotei a internet de seu celular.
 
-```shell
 
-country=BR
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-  
-network={
-        scan_ssid=1
-        ssid="NOME_DA_REDE"
-        psk="SENHA_DA_REDE"
-}
+* Personal: (RECOMENDADO) - Use o roteador da sua casa ou habilite seu Celular como Roteador 
 
-```
+    ```shell
+    
+    country=BR
+    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+    update_config=1
+      
+    network={
+            scan_ssid=1
+            ssid="COLOQUEO_O_NOME_DA_REDE"
+            psk="COLOQUE_A_SENHA_DA_REDE"
+    }
+    
+    ```
+* Enterprise: Redes WPA2 
+
 > A rede da FIAP requer autenticação enterprise, ``não recomendo`` pois seu usuário e senha ficará salvo na raspberry pi e qualquer pessoa mal intencionada pode se utiizar desta vulnerabilidade.
 
-```shell
-
-# Connect to a WPA2 Enterprise network with wpa_supplicant with this .conf file.
-# I used this to connect to my university's wireless network on Arch linux.
-# Here's the command I used:
-#
-#   wpa_supplicant -i wlan0 -c ./wpa_supplicant.conf
-# 
-
-network={
-  ssid="YOUR_SSID"
-  scan_ssid=1
-  key_mgmt=WPA-EAP
-  identity="YOUR_USERNAME"
-  password="YOUR_PASSWORD"
-  eap=PEAP
-  phase1="peaplabel=0"
-  phase2="auth=MSCHAPV2"
-}
-
-```
+    ```shell
+    
+    # Connect to a WPA2 Enterprise network with wpa_supplicant with this .conf file.
+    # I used this to connect to my university's wireless network on Arch linux.
+    # Here's the command I used:
+    #
+    #   wpa_supplicant -i wlan0 -c ./wpa_supplicant.conf
+    # 
+    
+    network={
+      ssid="YOUR_SSID"
+      scan_ssid=1
+      key_mgmt=WPA-EAP
+      identity="YOUR_USERNAME"
+      password="YOUR_PASSWORD"
+      eap=PEAP
+      phase1="peaplabel=0"
+      phase2="auth=MSCHAPV2"
+    }
+    
+    ```
 
 Configuração finalizada! Agora vamos ligar! 
 
@@ -193,18 +202,24 @@ Agora com tudo configurado e instalado chegou a hora de ligar e testar.
 
 ![sdcard](sdcard.png)
 
+> O seu notebook e a raspberry pi devem estar na mesma rede Wifi do seu Smartphone/Roteador como indica a imagem abaixo.
+
+![rede](rede.png)
+
+
 !!! exercise
     Agora você deve:
 
         - Conecte o micro SD Card na Raspberry PI
-        - Mantenha sua rede wifi ligada
-        - Ligue o raspberry na Fonte de alimentação
+        - Mantenha sua rede wifi ligada (Smartphone como roteador)
+        - Conecte seu computador(notebook) na mesma rede Wifi configurada na Raspbeery Pi
+        - Ligue a fonte de alimentação na raspberry pi
         - Aguarde alguns segundos e vefifique o ip que foi atribuido ao Raspberry PI
-        - abra o puTTY e digite o ip da Raspberry PI
+        - No seu computador, abra o puTTY e digite o ip da Raspberry PI
         - Se tudo estiver correto, um terminal irá abrir e vai solicitar login e senha
 
 
-![ssh](ssh2.png)
+![ssh](ssh2.PNG)
 
 
 > Por padrão, o login e senha da raspberry pi será:
