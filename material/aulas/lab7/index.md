@@ -1,3 +1,4 @@
+## Raspberry PI
 
 ![](https://hackaday.com/wp-content/uploads/2016/02/pihero.jpg?w=800)
 
@@ -21,7 +22,7 @@ Nesta etapa vamos ver dentre outras coisas: o que é a Respberry Pi, Sistema Ope
         - Shell Script
         - ...
 
-## Raspberry PI
+## Raspberry PI x Arduino
 
 Antes de falar da Raspberry PI, vamos lembrar que o Arduino UNO, que usamos, possui um ``microcontrolador`` de 8-bit [link do datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf). Sua arquitetura RISC é simples, e cobre bem os requisitos mínimos de um sistema embarcado. Contudo, não é possivel rodar um sistema operacional completo, o que pode limitar algumas possibiildades de sistemas mais complexos.
 
@@ -38,6 +39,9 @@ A placa Raspberry Pi foi lançada em 2012 pela Raspberry Pi Fundation, sendo uma
 > [Link para conhecer outros modelos de SBC](https://all3dp.com/pt/1/single-board-computer-computadores-placa-unica-alternativas-raspberry-pi/)
 
 Agora que já entendemos um pouco o que é Raspberry PI, vamos aprender a usar....
+
+!!! progress
+    Continuar...
 
 ## Raspbeery PI - Getting Started
 
@@ -68,6 +72,8 @@ Podemos utilizar diversas distribuções na RBI, dentre elas as mais comuns são
 
 > Fim da teoria, vamos pra parte prática!! Leia com atenção este guia e siga todos os passos.  
 
+!!! progress
+    Continuar...
    
 ### Flash SD Card
 
@@ -77,7 +83,8 @@ As outras versões do SO podem ser encontras [no link https://www.raspberrypi.co
 
 ![RPI-OS](RPI-OS.png)
 
-> Pra facilitar, o link para [downlod já está aqui](https://downloads.raspberrypi.org/raspios_oldstable_armhf/images/raspios_oldstable_armhf-2022-04-07/2022-04-04-raspios-buster-armhf.img.xz)
+!!! info
+    Pra facilitar, o link para [downlod já está aqui](https://downloads.raspberrypi.org/raspios_oldstable_armhf/images/raspios_oldstable_armhf-2022-04-07/2022-04-04-raspios-buster-armhf.img.xz)
 
 
 Para gravar o SD Card podemos utilizar algumas opções o mais simples é o ``Balena Etcher`` que roda em diversas plataformas.
@@ -95,7 +102,9 @@ Para gravar o SD Card podemos utilizar algumas opções o mais simples é o ``Ba
         - Se tudo deu certo:
             -  Irão aparecer duas particições referentes, sendo uma delas chamada "boot"
             -  Caso contrário, alguma coisa deu errada, formate o SD Card em FAT32 e grave novamente. 
-        
+
+!!! progress
+    Continuar...        
 
 ### Modo de uso - Interface Gráfica 
 
@@ -131,7 +140,9 @@ O resultado esperado deve ser semelhante ao da imagem abaixo:
 
 ![ssh1](ssh1.png)
 
-
+!!! progress
+    Continuar...
+    
 #### Configuração de Rede Wi-fi
 
 A configuração de rede do Wi-fi é feita através da configuração de um arquivo chamado wpa_supplicant.conf que deve ser criado dentro da pasta boot.
@@ -192,6 +203,9 @@ A configuração de rede do Wi-fi é feita através da configuração de um arqu
 
 Configuração finalizada! Agora vamos ligar! 
 
+!!! progress
+    Continuar...
+
 #### Boot Raspberry PI
 
 Para ter acesso SSH ao raspberry PI vamos utilizar o o software ``PuTTy``.
@@ -230,6 +244,8 @@ Agora com tudo configurado e instalado chegou a hora de ligar e testar.
         
 Finalizado! Agora estamos com nosso raspberry conectado e funcionando. 
 
+!!! progress
+    Continuar...
 
 ## Primeiro teste da raspberry 
 
@@ -247,11 +263,11 @@ echo "17" > /sys/class/gpio/export
 echo "out" > /sys/class/gpio/gpio17/direction
 
 # Escreve na saida do led (nivel logico alto)
-echo "1" > /sys/class/gpio/gpio4/value
+echo "1" > /sys/class/gpio/gpio17/value
 
 
 # Escreve na saida do led (nivel logico baixo)
-echo "0" > /sys/class/gpio/gpio4/value
+echo "0" > /sys/class/gpio/gpio17/value
 
 # libera o pino
 echo "17" > /sys/class/gpio/unexport
