@@ -1,6 +1,9 @@
 site_name: IoT
-site_author: Arnaldo Viana 
-
+site_author: Arnaldo Viana
+repo_url: https://github.com/arnaldojr/IoT/
+repo_name: "IoT"
+site_url: https://arnaldojr.github.io/IoT/ 
+copyright: 'Copyright &copy; Arnaldo Viana @ FIAP'
 
 extra:
     materia: Disruptive Architectures IA and IoT
@@ -8,25 +11,20 @@ extra:
     ano: 2022
 
 theme:
-  feature:
-    tabs: true
   name: active-handout
   #custom_dir: overrides
+  features:
+    - content.code.annotate
+
 
 docs_dir: material
 site_dir: docs
 
-repo_url: https://github.com/arnaldojr/IoT/
-repo_name: "IoT"
-site_url: https://arnaldojr.github.io/IoT/
-
-
-    
-# theme: material
-
 
 # Extensions / plugins
 
+extra_css:
+  - https://cdn.jsdelivr.net/gh/insper-education/active-handout-css@main/devlife.css
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
@@ -37,16 +35,16 @@ extra_javascript:
   - js/termynal.js
   - js/custom.js
 
+
 # Extensions / plugins
 plugins:
   - git-revision-date-localized
   - search
   - mkdocs-jupyter:
       execute: False
+  - active-exercises:
+    offering_id: 1
 
-extra_css:
-#  - css/termynal.css
-  - https://cdn.jsdelivr.net/gh/insper-education/active-handout-css@main/devlife.css
 
 
 markdown_extensions:
