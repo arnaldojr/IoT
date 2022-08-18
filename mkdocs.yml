@@ -42,10 +42,6 @@ plugins:
   - search
   - mkdocs-jupyter:
       execute: False
-  - active-exercises:
-    offering_id: 1
-
-
 
 markdown_extensions:
   - markdown.extensions.tables
