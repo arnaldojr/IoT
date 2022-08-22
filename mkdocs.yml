@@ -92,7 +92,8 @@ nav:
     - Lab04: aulas/lab4/TTS-STT.ipynb
     - Lab05: aulas/lab5/index.md   
     - Lab06: aulas/lab6/index.md  
-    - Lab07: aulas/lab7/index.md       
+    - Lab07: aulas/lab7/index.md
+    - Lab08: aulas/lab8/index.md       
   - CheckPoint:
     - CheckPoint3: checkpoint3/index.md
     - CheckPoint4: checkpoint4/index.md    
