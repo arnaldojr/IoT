@@ -13,6 +13,8 @@
 !!! progress
     Continuar...
 
+
+
 ## Conhecendo os pinos da Raspberry Pi
 
 Podemos utilizar a Raspberry Pi para conectar sensores e atuadores, de forma semelhante como foi feito utilizando o Arduino, para isso utilizamos os barramento de pinos da Raspberry Pi chamado de GPIO (General Purpose Input Output). Ao todo são 40 pinos (para RPI 2 ou superior) e de forma geral cada pino possui uma função ou caracteristica especifica.
@@ -42,6 +44,8 @@ Vamos conhecer o que é cada pino:
 
 !!! exercise
     Quantos pinos GPIO estão disponiveis?
+
+
 
 !!! progress
     Continuar...
@@ -81,8 +85,12 @@ sudo apt install rpi.gpio
 
 Se ainda não estiver instalado, será instalado. Se já estiver instalado, será atualizado se uma versão mais recente estiver disponível.
 
+
+
 !!! progress
     Continuar...
+
+
 
 
 ### Conhecendo a biblioteca RPi.GPIO
@@ -216,6 +224,7 @@ Agora que já entendemos a estrutura básica do script python, faça os exercici
 !!! progress
     Continuar...
 
+
 ## Montando um Webserver em Flask
 
 Vamos montar um webserver na raspberry pi com flask. A ideia deste exemplo é controlar por um navegador web o status de um led entre ligado e desligado:
@@ -271,6 +280,8 @@ Vamos criar o ``app.py``. No terminal da raspberry pi, digite:
 nano app.py
 
 ```  
+
+
 Com o editor nano aberto digite:
 
 ```python
@@ -328,6 +339,8 @@ if __name__ == "__main__":
    app.run(host='0.0.0.0', port=80, debug=True)
 
 ```  
+
+
 show! Salve e feche o editor nano. Ctrl+X >> Y
 
 
@@ -338,6 +351,7 @@ cd templates
 nano index.html
 
 ```  
+
 Com o editor nano aberto digite:
 
 ```html
@@ -363,6 +377,7 @@ Com o editor nano aberto digite:
 </html>
 
 ```
+
 show! Salve e feche o editor nano. Ctrl+X >> Y
 
 Vamos criar o arquivo de estilo css ``index.css``. No terminal da raspberry pi, digite:
@@ -373,7 +388,7 @@ cd static
 nano index.html
 
 ```  
-Com o editor nano aberto digite:
+> Com o editor nano aberto digite:
 
 ```css
 
@@ -398,7 +413,7 @@ body {
 
 ```
 
-show! Salve e feche o editor nano. Ctrl+X >> Y
+> show! Salve e feche o editor nano. Ctrl+X >> Y
 
 ### Hora de testar
 
@@ -411,7 +426,9 @@ cd ..
 sudo python app.py
 
 ```  
-Deixe o flask rodando na raspberry e no computador ou no smartphone (Deve estar na mesma rede da raspberry), abra o navegador web e digite o ip da raspberry pi. O resultado esperado é abrir uma pagina web e controlar o led. 
+
+
+> Deixe o flask rodando na raspberry e no computador ou no smartphone (Deve estar na mesma rede da raspberry), abra o navegador web e digite o ip da raspberry pi. O resultado esperado é abrir uma pagina web e controlar o led. 
 
 !!! exercise
     Compreenda o código app.py e monte o circuito adequado para conseguir visualizar o led acender e apagar.
