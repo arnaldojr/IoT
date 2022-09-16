@@ -1,11 +1,10 @@
 ## Agenda
 
-
-| AULA | Segunda-feira (Lins) | terça-feira (Vl. Olimpia | sexta-feira (Paulista) | CONTEÚDO                                            | LABORATÓRIO | OBSERVAÇÃO                             |
-|:----:|:--------------------:|:------------------------:|:----------------------:|-----------------------------------------------------|-------------|----------------------------------------|
-|    1 |         01/08        |           02/08          |          05/08         | Introdução ao Node-RED, DashBoard e Protocolo MQTT  | lab5         |                                        |
-|    2 |         08/08        |           09/08          |          12/08         | Node-RED e comunicação com o Arduino                | lab6        | Divulgação do desafio para CheckPoint4 |
-|    3 |         15/08        |           16/08          |          19/08         | Raspberry Pi - Setup infraestrura + "Hello World"   | lab7        |                                        |
-|    4 |         22/08        |           23/08          |          26/08         | Raspberry Pi - trabalhando com sensores e atuadores | lab8        |                                        |
-|    5 |         29/08        |           30/08          |          02/09         | Raspberry Pi - WebServer flask                      | lab9        | Data de entrega CP4 - em video         |
-|    6 |         05/09        |           06/09          |          09/09         | Raspberry Pi - Visão Computacional                  | lab10        |                                        |
+| 4SIS - Segunda-feira | 4SIA - Quarta-feira | Conteúdo |
+|:---:|:---:|:---|
+| 19/09 | 21/09 | Introdução a o Arduino: Sensores + Atuadores |
+| 26/09 | 28/09 | Programação arduino sensores<br>arduino +python<br>Interrupção externa |
+| 03/10 | 05/10 | Introdução ao Node-RED  - Fluxo, Dashboard<br>Protocolo MQTT e Comunicação com o Arduino |
+| 10/10 | 12/10/2022 feriado | aula estudio  |
+| 17/10 | 19/10 | aula estudio  |
+| 24/10 | 26/10 | Apresentação NAC4 |

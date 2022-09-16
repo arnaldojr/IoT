@@ -94,9 +94,9 @@ nav:
     - Lab06: aulas/lab6/index.md  
     - Lab07: aulas/lab7/index.md
     - Lab08: aulas/lab8/index.md       
-  - CheckPoint:
-    - CheckPoint3: checkpoint3/index.md
-    - CheckPoint4: checkpoint4/index.md    
+  - NAC:
+ #   - CheckPoint3: checkpoint3/index.md
+    - NAC4: NAC4/index.md    
   - Exemplos:
     - Básicos - HelloWorld:
       - Pisca LED: exemplos/0.helloworld/ex1/index.md
