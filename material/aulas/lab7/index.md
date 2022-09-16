@@ -177,7 +177,7 @@ A configuração de rede do Wi-fi é feita através da configuração de um arqu
     ```
 * Enterprise: Redes WPA2 
 
-> A rede da FIAP requer autenticação enterprise, ``não recomendo`` pois seu usuário e senha ficará salvo na raspberry pi e qualquer pessoa mal intencionada pode se utiizar desta vulnerabilidade.
+> A rede da FIAP requer autenticação enterprise, ``não recomendo`` pois seu usuário e senha ficará salvo na raspberry pi e qualquer pessoa mal intencionada pode se utilizar desta vulnerabilidade.
 
     ```shell
     
