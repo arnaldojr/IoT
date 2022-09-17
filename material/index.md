@@ -16,7 +16,6 @@ Ao final da disciplina o aluno será capaz de:
 
 Vamos trabalhar basicamente com Arduino e alguns sensores e atuadores simples que são facilmente encontrados em online em sites nacionais como [filipeFlop](http://www.filipeflop.com.br) ou no exterior como [SparkFun](https://www.sparkfun.com) entre outros... 
 
-Se quiser usar simulador, sugiro o [SimulIDE](https://www.simulide.com/p/home.html). Como instalar a infra necessária para o curso? Da uma olhadinha na aba instalação.
 
 ## Idéias de projetos
 
